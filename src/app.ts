@@ -64,4 +64,13 @@ app.get('/api/error_randomly', (req, res, next) => {
   res.status(200).send('Good!');
 });
 
+app.get('/api/error_randomly_50', (req, res, next) => {
+  const shouldError = Date.now() % 2 === 0;
+  if (shouldError) {
+    res.status(500).send('something wrong');
+    return;
+  }
+  res.status(200).send('Good!');
+});
+
 app.use(logger.ErrorLoggerHandler);
