@@ -69,4 +69,4 @@ build/**
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-scripts/.bzt-artifacts
+scripts/bzt-artifacts
