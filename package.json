@@ -19,7 +19,8 @@
     "compile-watch": "tsc -w",
     "start-local": "node -r dotenv/config api/server.js",
     "start-local-pm2": "pm2 start api/server.js",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "deploy": "npm run compile; docker stop ft-app; docker rm ft-app; docker image rm forethought; docker build -t forethought .; docker run --name ft-app -p 80:8080 -d forethought"
   },
   "keywords": [
     "example",
