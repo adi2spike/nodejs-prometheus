@@ -5,7 +5,7 @@ settings:
 execution:
   - concurrency: 10
     ramp-up: 10s
-    hold-for: 15m
+    hold-for: 60m
     scenario: simple
 
 scenarios:
