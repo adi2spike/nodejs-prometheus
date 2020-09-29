@@ -30,7 +30,7 @@ app.get('/api/slow_randomly', (req, res, next) => {
 
   setTimeout(() => {
     res.status(200).send('Slow randomly');
-  }, getRandomNumber(1, 10) * 1000);
+  }, getRandomNumber(1, 100) * 1000);
 });
 app.get('/api/internal_error', (req, res, next) => {
   try {
@@ -46,4 +46,22 @@ app.get('/api/client_error', (req, res, next) => {
     res.status(400).send(error.message);
   }
 });
+
+app.get('/api/internal_error', (req, res, next) => {
+  try {
+    throw new Error('Something broke...');
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
+app.get('/api/error_randomly', (req, res, next) => {
+  const shouldError = Date.now() % 3 === 0;
+  if (shouldError) {
+    res.status(500).send('something wrong');
+    return;
+  }
+  res.status(200).send('Good!');
+});
+
 app.use(logger.ErrorLoggerHandler);

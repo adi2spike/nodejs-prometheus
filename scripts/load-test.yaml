@@ -19,4 +19,5 @@ scenarios:
       - url: http://adi2go3c.mylabserver.com/api/slow_randomly
       - url: http://adi2go3c.mylabserver.com/api/internal_error
       - url: http://adi2go3c.mylabserver.com/api/client_error
+      - url: http://adi2go3c.mylabserver.com/api/error_randomly
 
