@@ -1,0 +1,41 @@
+{
+  "settings": {
+    "artifacts-dir": "./bzt-artifacts"
+  },
+  "execution": [
+    {
+      "concurrency": 10,
+      "ramp-up": "10s",
+      "hold-for": "1m",
+      "scenario": "simple"
+    }
+  ],
+  "scenarios": {
+    "simple": {
+      "think-time": 0.2,
+      "requests": [
+        {
+          "url": "http://54.206.3.178/api/ping1"
+        },
+        {
+          "url": "http://54.206.3.178/api/ping2"
+        },
+        {
+          "url": "http://54.206.3.178/api/ping3"
+        },
+        {
+          "url": "http://54.206.3.178/api/slow"
+        },
+        {
+          "url": "http://54.206.3.178/api/slow_randomly"
+        },
+        {
+          "url": "http://54.206.3.178/api/internal_error"
+        },
+        {
+          "url": "http://54.206.3.178/api/client_error"
+        }
+      ]
+    }
+  }
+}

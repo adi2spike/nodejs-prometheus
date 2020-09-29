@@ -1,0 +1,5 @@
+Created the tree successfully using /Users/adisembiring/Data/github/learn/nodejs-prometheus/scripts/bzt-artifacts/modified_requests-4.jmx
+Starting the test @ Sat Sep 26 00:03:20 AEST 2020 (1601042600625)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+Tidying up ...    @ Sat Sep 26 00:13:36 AEST 2020 (1601043216288)
+... end of run
